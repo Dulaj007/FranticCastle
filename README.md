@@ -1,3 +1,5 @@
+![Frantic Castle](https://jpcdn.it/img/4bb6055f303cccd50139001c1adb76d0.png)
+
 # Frantic Castle
 
 Frantic Castle is a web platform for the Frantic Castle mobile gaming studio. It gives players a place to explore game titles, follow studio updates, and stay connected with what the team is building.
