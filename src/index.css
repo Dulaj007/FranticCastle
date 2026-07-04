@@ -1,0 +1,135 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Gotha:wght@400;700;900&display=swap');
+
+@import 'tailwindcss';
+
+
+
+@theme {
+  --color-background-primary: #10111c; /* Background color */
+
+  --color-text-light: #ffffff;       /* Primary text color */
+  --color-text-secondary: #ea1ef3;     /* Secondary text color */
+  --color-text-third: #821E87; 
+  --color-text-fourth: #1C0D32; 
+  --color-text-dark: #000000;     /* Primary border color */
+  /* Add other custom colors as needed */
+
+  
+  /* Font Families */
+  --font-gotha: "Gotha", sans-serif;
+}
+
+
+
+.video-wrapper {
+  position: absolute;  /* Keeps it in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensures content stays on top */
+}
+
+.video-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;  /* Start from the left */
+  width: 50%; /* Adjust coverage */
+  height: 100%;
+  background: linear-gradient(to right, rgba(16, 17, 28, 1), rgba(16, 17, 28, 0)); 
+  pointer-events: none; /* Prevent interference */
+}
+.fixed {
+  position: fixed;
+}
+.transform180 {
+  transform: rotate(180deg);
+}
+.translate-x-full {
+  transform: translateX(100%);
+}
+.translate-x-0 {
+  transform: translateX(0);
+}
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-top-bottom {
+  position: absolute;  /* Keeps it in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100; /* Ensures content stays on top */
+}
+
+.image-top-bottom::after {
+  content: '';
+  position: absolute;
+  top: 0; /* Start from the top */
+  left: 0; /* Start from the left */
+  width: 100%; /* Adjust coverage across the entire width */
+  height: 50%; /* Adjust height for the gradient */
+  background: linear-gradient(to bottom, rgba(16, 17, 28, 1), rgba(16, 17, 28, 0)); 
+  pointer-events: none; /* Prevent interference */
+}
+
+.image-bottom-top {
+  position: absolute;  /* Keeps it in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101; /* Ensures content stays on top */
+}
+
+.image-bottom-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Start from the bottom */
+  left: 0; /* Start from the left */
+  width: 100%; /* Adjust coverage across the entire width */
+  height: 50%; /* Adjust height for the gradient */
+  background: linear-gradient(to top, rgba(16, 17, 28, 1), rgba(16, 17, 28, 0)); 
+  pointer-events: none; /* Prevent interference */
+}
+
+.guild-slider-wrapper {
+  transform: scale(0.65);
+  transform-origin: center center; /* Ensure the scaling is centered */
+  width: 100%; /* Ensure it takes full width */
+  height: auto; /* Adjust height accordingly */
+}
+
+@media (min-width: 800px) {
+  .guild-slider-wrapper {
+    transform: scale(1); /* Scale back to normal on larger screens */
+  }
+}
+
+.Hover-Effect{
+  @apply transform transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#EA1EF3] text-[var(--color-text-light)] brightness-120 hover:brightness-100
+}
+
+
+.Hover-Effect-2x{
+  @apply transform transition-all duration-300 ease-in-out hover:scale-110
+}
+
+.Input-Box{
+  @apply w-full pl-4 text-sm p-2 border rounded-xl focus:ring-2 border-black/5 shadow-lg focus:text-[var(--color-text-third)]
+}
+
+.Input-Box-title{
+  @apply text-lg text-[var(--color-text-third)] tracking-tight mt-10 uppercase font-bold mb-4
+}
+.Follow-White-Icon{
+  @apply w-[7vw] h-[7vw] min-[800px]:w-[2vw] min-[800px]:h-[2vw] brightness-85 hover:scale-110 hover:brightness-120
+}
+
+.font-extrabold-custom {
+  font-weight: 800;
+}

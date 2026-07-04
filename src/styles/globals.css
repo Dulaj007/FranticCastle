@@ -1,0 +1,31 @@
+/*
+ * globals.css
+ *
+ * Global animation keyframes and Tailwind animation tokens.
+ *
+ * Bug fix: the original file contained a second `@import "tailwindcss"` directive
+ * which duplicated the one already present in index.css. Tailwind processes both
+ * entry points independently and the duplicate import caused the full Tailwind
+ * layer (base, components, utilities) to be emitted twice, bloating the compiled
+ * CSS bundle. The duplicate import has been removed — Tailwind is imported once
+ * in index.css which is the primary stylesheet entry point.
+ *
+ * The @theme block below only extends the Tailwind token system with custom
+ * animation values; it does not require a fresh Tailwind import to do so.
+ */
+
+@theme {
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+    }
+
+    /* Custom animation tokens consumed via animate-fade-in / animate-fade-out. */
+    --animate-fade-in:  fadeIn  0.5s ease-in  forwards;
+    --animate-fade-out: fadeOut 0.5s ease-out forwards;
+}

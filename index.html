@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+      SEO: icon type corrected from image/svg+xml to image/png.
+      The asset is logo.png, not an SVG. An incorrect MIME type causes
+      some browsers to reject the icon entirely.
+    -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary page title -->
+    <title>Frantic Castle | Immersive Mobile Game Studio</title>
+
+    <!--
+      SEO: meta description is the primary snippet shown in search engine
+      results. Keep it under 160 characters and include the core value
+      proposition. Without this tag, search engines generate their own
+      excerpt which is often unflattering.
+    -->
+    <meta
+      name="description"
+      content="Frantic Castle is a mobile game development studio crafting immersive strategy and adventure games. Explore our titles, meet the team, and join the beta."
+    />
+
+    <!--
+      SEO: robots directive. "index, follow" is the default but stating it
+      explicitly prevents misconfigured crawlers from accidentally blocking
+      the site during deployment changes.
+    -->
+    <meta name="robots" content="index, follow" />
+
+    <!--
+      Open Graph tags control how this page appears when shared on
+      Facebook, LinkedIn, Discord, and any OG-compatible platform.
+      og:image should be an absolute URL to a 1200x630px image.
+    -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="Frantic Castle" />
+    <meta property="og:title"       content="Frantic Castle | Immersive Mobile Game Studio" />
+    <meta property="og:description" content="Frantic Castle is a mobile game development studio crafting immersive strategy and adventure games. Explore our titles, meet the team, and join the beta." />
+    <meta property="og:url"         content="https://franticcastle.com/" />
+    <meta property="og:image"       content="https://franticcastle.com/logo.png" />
+
+    <!--
+      Twitter card tags control link previews on X (formerly Twitter).
+      summary_large_image renders a full-width card with the og:image above.
+    -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Frantic Castle | Immersive Mobile Game Studio" />
+    <meta name="twitter:description" content="Frantic Castle is a mobile game development studio crafting immersive strategy and adventure games. Explore our titles, meet the team, and join the beta." />
+    <meta name="twitter:image"       content="https://franticcastle.com/logo.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
